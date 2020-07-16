@@ -1,0 +1,48 @@
+form {
+
+  /* display: flex; */
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  /* width: 90%; */
+}
+
+textarea {
+  
+  width: 100%;
+  height: 30px;
+  border-top-style: hidden;
+  border-right-style: hidden;
+  border-left-style: hidden;
+  border-bottom-style: solid;
+  border-bottom-width: 0.12em;
+  border-bottom-color: #545149;
+  background-color: #f4f1ec;
+}
+
+form div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+form div button {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: flex-start;
+  margin: 12px 0px;
+  font-family: 'Bungee', cursive;;
+  src: url('https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+  color: #FFFFFF;
+  background-color: #4152A1;
+  border: 1px solid black;
+  font-size: 0.7em;
+}
+
+.counter {
+  font-family: 'Bungee', cursive;;
+  src: url('https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,700;1,300;1,700&display=swap');
+  margin: 12px 0px;
+  font-size: 0.7em;
+}
