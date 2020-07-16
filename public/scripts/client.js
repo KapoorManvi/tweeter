@@ -34,7 +34,7 @@ const tweetData = [
 
 const createTweetElement = function(tweetData) {
   console.log("TWEET DATA: ", tweetData);
-  $('.tweet-container').append(
+  $('.tweet-container').prepend(
       `<article class="tweet-box">
       <header class="tweeter">
         <div>
@@ -68,15 +68,18 @@ $(document).ready(function() {
   
   $('.tweet-form').submit(function (event) {
     event.preventDefault();
-    // renderTweet(tweetData);
-    // createTweetElement(tweetData);
     
-    $.ajax('/tweets/', { method: 'POST', data: $(this).serialize() })
-    .then(function () {
-      console.log('Success: ');
-      loadTweets();
+    if ($('textarea').val() === "" || $('textarea').val() === null) {
+      window.alert("A penny for your tweet? Looks like you forgot to type out your tweet.")
+    } else if (parseInt($('.counter').val()) < 0) {
+      window.alert("Whoa! Save some characters for another tweet. Your tweet is too long. Shorten it and smash that tweet button.")
+    } else {
+      $.ajax('/tweets/', { method: 'POST', data: $(this).serialize() })
+      .then(function () {
+        console.log('Success: ');
+        loadTweets();
     });
-
+    }
   });
  
   const loadTweets = function() {
