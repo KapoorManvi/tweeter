@@ -1,8 +1,9 @@
-header {
+.header-profile {
   height: 400px;
   width: 100%;
   background-color: coral;
   background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png");
+  
 }
 
 .profile {

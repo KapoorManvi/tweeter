@@ -1,3 +1,17 @@
+nav {
+  overflow: hidden;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.header-profile {
+  margin-top: 120px;
+}
+
 .navText {
   display: flex;
   justify-content: space-between;
@@ -72,3 +86,5 @@
     70% { top: -0.3em; }
     100% { top: 0; }
 }
+
+

@@ -25,9 +25,12 @@
     <!-- Header CSS -->
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
-      <!-- New Tweet CSS -->
-      <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <!-- New Tweet CSS -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
+     <!-- Tweets CSS -->
+     <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
+      
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -41,7 +44,7 @@
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
+    <nav class="sticky">
       <div class="navText">
         <span class="logo">tweeter</span>
         <div class="right"> 
@@ -52,7 +55,7 @@
         </div>
       </div>
     </nav>
-    <header>
+    <header class="header-profile">
       <div>
           <img class="profile-image" src="/images/profile-hex.png"> 
       </div>
@@ -69,27 +72,33 @@
       
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form method="POST" action="/tweets/">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
+        <form class="tweet-form" method="POST" action="/tweets/">
+          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div>
-            <button type="submit">Tweet</button>
+            <button class="tweet-button" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
-      <!-- DO THE BELOW TOMORROW -->
+
+      <!-- TWEETED TWEETS GO BELOW -->
     <section class="tweet-container">
       <article class="tweet-box">
-        <header>
+        <header class="tweeter">
           <div>
-            <img>
+            <img class="tweeter-image" src="https://i.imgur.com/73hZDYK.png">
             <p>Newton</p>
           </div>
-          <p>@SirIsaac</p>
+          <p class="user-id">@SirIsaac</p>
         </header>
+        <p>If I have seen further it is by standing on the shoulders of giants</p>
         <footer>
-
+          <p>10 days agao</p>
+          <div>
+          <i class="fa fa-heart icon" aria-hidden="true" ></i>
+          <i class="fa fa-flag icon" aria-hidden="true" ></i>
+          <i class="fa fa-refresh icon" aria-hidden="true" ></i>
+          </div>
         </footer>
       </article>
     </section>

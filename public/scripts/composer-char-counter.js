@@ -1,7 +1,7 @@
 
-
+// Counts the number of characters in a tweet being composed and counts down/up from the 140 allotted charactes
 $(document).ready(function() {
-  console.log("THESE ARE CATS")
+  
   
   $('textarea').keyup(function() {
     let textLength = $(this).val().length;

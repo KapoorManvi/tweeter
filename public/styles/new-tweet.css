@@ -20,6 +20,10 @@ textarea {
   background-color: #f4f1ec;
 }
 
+textarea::placeholder {
+  color: #b9c0d2; /* change * */
+}
+
 form div {
   display: flex;
   flex-direction: row;
