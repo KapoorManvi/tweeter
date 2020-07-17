@@ -1,21 +1,32 @@
 .header-profile {
   height: 400px;
-  width: 100%;
+  width: 40%;
+  margin-top: 175px;
+  margin-left: 60px;
   background-color: coral;
   background-image: url("https://www.transparenttextures.com/patterns/az-subtle.png");
   
 }
 
 .profile {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   color: #FFFFFF;
   
 }
 
 .profile-image {
   width: 300px;
-  display: block;
-  margin: 0 auto;
+  margin: 0.5em;
+  /* display: block;
+  margin: 0 auto; */
+}
+
+.main-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
 }

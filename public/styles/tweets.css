@@ -35,7 +35,10 @@
   /* font-weight: 500;  */
 }
 
-
+article p {
+  margin: 2em 0em;
+  overflow-wrap: break-word;
+}
 
 footer {
   display: flex;

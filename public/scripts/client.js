@@ -37,8 +37,15 @@ const escape =  function(str) {
 }
 
 const createTweetElement = function(tweetData) {
+  const tweetDate = new Date(tweetData.created_at);
+  const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+  const firstDate = new Date(tweetDate);
+  const secondDate = new Date();
+  const diffDays = Math.round(Math.abs((firstDate - secondDate) / oneDay));
+  let daysAgo = '';
+  diffDays === 0 ? daysAgo = 'Today' : daysAgo = diffDays + ' Day(s) Ago'
 
-  console.log("TWEET DATA: ", tweetData);
+
   $('.tweet-container').prepend(
       `<article class="tweet-box">
       <header class="tweeter">
@@ -50,7 +57,7 @@ const createTweetElement = function(tweetData) {
       </header>
       <p>${escape(tweetData.content.text)}</p>
       <footer>
-        <p>10 days agao</p>
+        <p>${daysAgo}</p>
         <div>
         <i class="fa fa-heart icon" aria-hidden="true" ></i>
         <i class="fa fa-flag icon" aria-hidden="true" ></i>
