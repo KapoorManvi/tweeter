@@ -49,6 +49,8 @@ nav {
   text-align: center;
   color: red;
   position: relative;
+}
+.bounce:hover {
   -moz-animation: bounce 0.7s infinite linear;
   -o-animation: bounce 0.7s infinite linear;
   -webkit-animation: bounce 0.7s infinite linear;

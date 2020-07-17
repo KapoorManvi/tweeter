@@ -30,9 +30,14 @@ const tweetData = [
   // }
 ]
 
-
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+}
 
 const createTweetElement = function(tweetData) {
+
   console.log("TWEET DATA: ", tweetData);
   $('.tweet-container').prepend(
       `<article class="tweet-box">
@@ -43,7 +48,7 @@ const createTweetElement = function(tweetData) {
         </div>
         <p class="user-id">${tweetData.user.handle}</p>
       </header>
-      <p>${tweetData.content.text}</p>
+      <p>${escape(tweetData.content.text)}</p>
       <footer>
         <p>10 days agao</p>
         <div>
@@ -68,11 +73,11 @@ $(document).ready(function() {
   
   $('.tweet-form').submit(function (event) {
     event.preventDefault();
-    
+    $('.tweet-form .error').slideUp()
     if ($('textarea').val() === "" || $('textarea').val() === null) {
-      window.alert("A penny for your tweet? Looks like you forgot to type out your tweet.")
+      $('.tweet-form .error').text("A penny for your tweet? Looks like you forgot to type out your tweet.").slideDown()
     } else if (parseInt($('.counter').val()) < 0) {
-      window.alert("Whoa! Save some characters for another tweet. Your tweet is too long. Shorten it and smash that tweet button.")
+      $('.tweet-form .error').text("Whoa! Ranting much?? Your tweet is too long. Shorten it and smash that tweet button again.").slideDown()
     } else {
       $.ajax('/tweets/', { method: 'POST', data: $(this).serialize() })
       .then(function () {

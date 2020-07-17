@@ -50,3 +50,11 @@ form div button {
   margin: 12px 0px;
   font-size: 0.7em;
 }
+
+.error {
+  color: red;
+}
+
+.hidden {
+  display: none;
+}
