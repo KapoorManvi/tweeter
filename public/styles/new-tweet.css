@@ -64,3 +64,11 @@ form div button {
 .hidden {
   display: none;
 }
+
+@media only screen and (max-width:800px) {
+  .new-tweet {
+    padding: 0 1.7em;
+    margin: 0;
+  }
+
+}

@@ -104,6 +104,25 @@ $(document).ready(function() {
 
   loadTweets();
 
+
+  // Check for breakpoint on scroll and changes nav-bar background 
+  $(window).scroll(function () {
+    const scrollHandler = $(this).scrollTop();
+    
+    
+    if (window.matchMedia('(min-width: 799px)').matches) {
+      if (scrollHandler > 400) {
+        $('.navText').css("color", "#4056A1")
+      } else {
+        $('.navText').css("color", "#FFFFFF")
+      }
+    } else {
+      $('.navText').css("color", "#FFFFFF");
+    }
+     
+  });
+
+
 });
 
 

@@ -89,4 +89,17 @@ nav {
     100% { top: 0; }
 }
 
+@media only screen and (max-width:800px) {
+  .navText {
+    background-color: transparent;
+  }
+  
 
+}
+ @media only screen and (max-width:426px) {
+  .navText {
+    background-color: #4056A1;
+  }
+  
+
+}

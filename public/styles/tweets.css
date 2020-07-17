@@ -3,7 +3,7 @@
   border-width: 0.12em;
   margin-top: 1.5em;
   border-color: #545149;
-  padding-left: 1.5em;
+  padding: 0 1em;
 }
 
 .tweeter {
@@ -45,7 +45,7 @@ footer {
   /* flex-direction: row; */
   justify-content: space-between;
   /* margin: 0 auto; */
-  width: 95%;
+  
   border-top: solid;
   border-top-width: 1.5px;
   border-top-color: #545149;
@@ -69,4 +69,15 @@ margin: 0.7em 0em;
 
 .tweet-container {
   margin: 50px
+}
+
+@media only screen and (max-width:800px) {
+  
+  .container {
+    width: 100%;
+  }
+
+  article p {
+    margin: 
+  }
 }
