@@ -20,10 +20,7 @@ nav {
   height: 120px;
   color: #FFFFFF;
   padding: 1.5em
-  
 }
-
-
 
 .logo {
   font-family: 'Bungee', cursive;;
@@ -35,8 +32,6 @@ nav {
   font-weight: 100;
   font-size: 21px;
   src: url('https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,700;1,300;1,700&display=swap');
-  
-  
 }
 
 .right a {
@@ -92,14 +87,10 @@ nav {
 @media only screen and (max-width:800px) {
   .navText {
     background-color: transparent;
-  }
-  
-
+  } 
 }
  @media only screen and (max-width:426px) {
   .navText {
     background-color: #4056A1;
   }
-  
-
 }

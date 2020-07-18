@@ -15,7 +15,6 @@ html {
  */
 
 body {
-
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
@@ -28,9 +27,7 @@ body {
  @font-face {
   font-family: 'Bungee', cursive;
   font-family: 'Source Sans Pro', sans-serif;
-
   src: url('https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+Pro:ital,wght@0,300;0,700;1,300;1,700&display=swap');
-
   font-display: swap;
 }
 
@@ -38,8 +35,6 @@ body {
   display: flex;
   font-family: 'Source Sans Pro', sans-serif;
 }
-
-
 
 main {
   display: flex;
@@ -57,7 +52,6 @@ main {
   main {
     margin: 0;
   }
-
 }
 
 
